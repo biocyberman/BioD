@@ -51,7 +51,7 @@ struct RcPtr(T, alias Free) {
     this(this)
     {
         static if (is(T == cram_slice)) {
-            debug writeln("COPIED #", data.ptr.id + 1);
+            debug writeln("COPIED #", data.ptr.ref_id + 1);
         }
     }
 
